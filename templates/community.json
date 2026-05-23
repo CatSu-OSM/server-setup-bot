@@ -1,0 +1,171 @@
+{
+  "slug": "community",
+  "name": "Community Server",
+  "description": "A clean general-purpose community server with announcements, chat, and staff space.",
+  "roles": [
+    {
+      "name": "Admin",
+      "color": "#e11d48",
+      "hoist": true,
+      "mentionable": true,
+      "permissions": [
+        "Administrator"
+      ]
+    },
+    {
+      "name": "Moderator",
+      "color": "#f97316",
+      "hoist": true,
+      "mentionable": true,
+      "permissions": [
+        "ManageMessages",
+        "KickMembers",
+        "BanMembers",
+        "ModerateMembers",
+        "ManageChannels"
+      ]
+    },
+    {
+      "name": "Member",
+      "color": "#22c55e",
+      "hoist": false,
+      "mentionable": false,
+      "permissions": [
+        "ViewChannel",
+        "SendMessages",
+        "ReadMessageHistory",
+        "Connect",
+        "Speak"
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "name": "Information",
+      "channels": [
+        {
+          "name": "welcome",
+          "type": "text",
+          "topic": "Start here and read the basics.",
+          "permissions": [
+            {
+              "target": "@everyone",
+              "allow": [
+                "ViewChannel",
+                "ReadMessageHistory"
+              ],
+              "deny": [
+                "SendMessages"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "announcements",
+          "type": "announcement",
+          "topic": "Important server updates.",
+          "permissions": [
+            {
+              "target": "@everyone",
+              "allow": [
+                "ViewChannel",
+                "ReadMessageHistory"
+              ],
+              "deny": [
+                "SendMessages"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Community",
+      "channels": [
+        {
+          "name": "general",
+          "type": "text",
+          "topic": "General conversation."
+        },
+        {
+          "name": "introductions",
+          "type": "text",
+          "topic": "Say hello and introduce yourself."
+        },
+        {
+          "name": "voice-lounge",
+          "type": "voice"
+        }
+      ]
+    },
+    {
+      "name": "Staff",
+      "channels": [
+        {
+          "name": "staff-chat",
+          "type": "text",
+          "topic": "Private staff coordination.",
+          "permissions": [
+            {
+              "target": "@everyone",
+              "allow": [],
+              "deny": [
+                "ViewChannel"
+              ]
+            },
+            {
+              "target": "Admin",
+              "allow": [
+                "ViewChannel",
+                "SendMessages",
+                "ReadMessageHistory"
+              ],
+              "deny": []
+            },
+            {
+              "target": "Moderator",
+              "allow": [
+                "ViewChannel",
+                "SendMessages",
+                "ReadMessageHistory"
+              ],
+              "deny": []
+            }
+          ]
+        },
+        {
+          "name": "mod-voice",
+          "type": "voice",
+          "permissions": [
+            {
+              "target": "@everyone",
+              "allow": [],
+              "deny": [
+                "ViewChannel",
+                "Connect"
+              ]
+            },
+            {
+              "target": "Admin",
+              "allow": [
+                "ViewChannel",
+                "Connect",
+                "Speak"
+              ],
+              "deny": []
+            },
+            {
+              "target": "Moderator",
+              "allow": [
+                "ViewChannel",
+                "Connect",
+                "Speak"
+              ],
+              "deny": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

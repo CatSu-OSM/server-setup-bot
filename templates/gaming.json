@@ -1,0 +1,102 @@
+{
+  "slug": "gaming",
+  "name": "Gaming Server",
+  "description": "A gaming-focused server with squad voice channels and LFG organization.",
+  "roles": [
+    {
+      "name": "Admin",
+      "color": "#ef4444",
+      "hoist": true,
+      "mentionable": true,
+      "permissions": [
+        "Administrator"
+      ]
+    },
+    {
+      "name": "Captain",
+      "color": "#3b82f6",
+      "hoist": true,
+      "mentionable": true,
+      "permissions": [
+        "ManageMessages",
+        "MoveMembers",
+        "MuteMembers",
+        "DeafenMembers"
+      ]
+    },
+    {
+      "name": "Player",
+      "color": "#10b981",
+      "hoist": false,
+      "mentionable": false,
+      "permissions": [
+        "ViewChannel",
+        "SendMessages",
+        "ReadMessageHistory",
+        "Connect",
+        "Speak"
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "name": "Start Here",
+      "channels": [
+        {
+          "name": "rules",
+          "type": "text",
+          "topic": "Server rules and expectations.",
+          "permissions": [
+            {
+              "target": "@everyone",
+              "allow": [
+                "ViewChannel",
+                "ReadMessageHistory"
+              ],
+              "deny": [
+                "SendMessages"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "patch-notes",
+          "type": "announcement",
+          "topic": "Major updates and events."
+        }
+      ]
+    },
+    {
+      "name": "Matchmaking",
+      "channels": [
+        {
+          "name": "lfg-chat",
+          "type": "text",
+          "topic": "Find teammates here."
+        },
+        {
+          "name": "clips-and-highlights",
+          "type": "text",
+          "topic": "Post your best plays."
+        }
+      ]
+    },
+    {
+      "name": "Voice Squads",
+      "channels": [
+        {
+          "name": "squad-1",
+          "type": "voice"
+        },
+        {
+          "name": "squad-2",
+          "type": "voice"
+        },
+        {
+          "name": "afk",
+          "type": "voice"
+        }
+      ]
+    }
+  ]
+}

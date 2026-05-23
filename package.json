@@ -1,0 +1,27 @@
+{
+  "name": "admin-bot",
+  "version": "0.1.0",
+  "description": "Discord bot for setting up servers from reusable templates.",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "register": "node scripts/register-commands.js",
+    "apply-live-setup": "node scripts/apply-live-setup.js",
+    "apply-requested-roles": "node scripts/apply-requested-roles.js"
+  },
+  "keywords": [
+    "discord",
+    "discord-bot",
+    "server-setup"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "discord.js": "^14.20.0",
+    "dotenv": "^16.6.1"
+  }
+}
