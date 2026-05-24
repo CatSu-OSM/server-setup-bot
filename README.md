@@ -1,4 +1,4 @@
-# Admin Bot
+# Server Setup Automation Bot
 
 A Discord server setup bot meant to be operated primarily through Codex or another coding agent.
 
@@ -84,6 +84,7 @@ Use a bot invite with these scopes:
 
 Recommended bot permissions:
 
+- `Administrator`
 - `Manage Roles`
 - `Manage Channels`
 - `View Channels`
